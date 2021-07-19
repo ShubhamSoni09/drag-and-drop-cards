@@ -1,0 +1,171 @@
+
+
+body {
+  margin: 30px;
+  font-family: "Georgia", serif;
+  line-height: 1.8em;
+  background-color:#FF9933;
+  color:var(--text);
+  margin:0;
+  font-family: 'Baloo', cursive;
+  overflow-x:hidden;
+}
+
+
+
+/* Main content area */
+
+body [cursor][cursor=default] {
+  cursor: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/199011/cursor_default.png), auto;
+}
+
+#content {
+  margin: 210px 70px;
+  text-align: center;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+/* Header/footer boxes */
+
+.wideBox {
+  clear: both;
+  text-align: center;
+  margin: 60px;
+  margin-left:20px;
+  padding: 10px;
+  background: #ebedf2;
+  border: 1px solid #333;
+}
+
+.wideBox h1 {
+  font-weight: bold;
+  margin: 20px;
+  color:#FD0E35;
+  font-size: 1.5em;
+}
+
+/* Slots for final card positions */
+
+#cardSlots {
+  margin: 50px auto 0 auto;
+  background:#FE6F5E;
+}
+
+/* The initial pile of unsorted cards */
+
+#cardPile {
+  margin: 0 auto;
+  background: #AAF0D1;
+}
+
+#cardSlots, #cardPile {
+  width: 840px;
+  height: 120px;
+  padding: 20px;
+  border: 2px solid #333;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  -moz-box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
+  -webkit-box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
+  box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
+}
+
+/* Individual cards and slots */
+
+#cardSlots div, #cardPile div {
+  float: left;
+  width: 70px;
+  height: 78px;
+  padding: 10px;
+  padding-top: 20px;
+  padding-bottom: 0;
+  border: 2px solid #333;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  margin: 0 0 0 10px;
+  background: #fff;
+}
+
+#cardSlots div:first-child, #cardPile div:first-child {
+  margin-left: 0;
+}
+
+#cardSlots div.hovered {
+  background: #aaa;
+  transform: translateY(8px);
+  box-shadow: 0 0px 0 0 var(--symbol-shadow);
+}
+
+#cardSlots div {
+  border-style:solid;
+}
+
+#cardPile div {
+  background: #666;
+  color: #fff;
+  font-size: 50px;
+  text-shadow: 0 0 3px #000;
+}
+
+#cardPile div.ui-draggable-dragging {
+  -moz-box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
+  -webkit-box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
+  box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
+}
+
+/* Individually coloured cards */
+
+#card1.correct { background: #FF8833; }
+#card2.correct { background: #A83731; }
+#card3.correct { background: orange; }
+#card4.correct { background: #CCFF00; }
+#card5.correct { background: #66FF66; }
+#card6.correct { background: #008080; }
+#card7.correct { background: #50BFE6; }
+#card8.correct { background: indigo; }
+#card9.correct { background: purple; }
+#card10.correct { background: #FF00CC; }
+
+
+
+
+  body #successMessage{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    right: 50%;
+    transform: translateY(-50%);
+    background-color:#FEEEEA ;
+    border-radius: 10px;
+    text-align: center;
+    font-family: 'Baloo', cursive;
+    
+  }
+  body #successMessage .header {
+    margin: 40px 0;
+    font-size: 60px;
+    margin-bottom: -20px;
+  }
+  body #successMessage #new {
+    margin-bottom: 30px;
+  }
+  body #successMessage #close {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    padding: 0 14px;
+    font-size: 32px;
+  }
+  body #successMessage:not(.show) {
+    display: none;
+  }
+
+  .button{
+    background-color: #8DFE5B;
+    border-radius: 5px;
+    margin-top:30px;
+  }
